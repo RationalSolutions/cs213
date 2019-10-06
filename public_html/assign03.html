@@ -1,10 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Assignment 03</title>
+    <title>Coby Jenkins' Home Page</title>
+    <style>
+        body {
+            background-image: url("assets/img/dnd_background.png");
+            background-repeat: no-repeat;
+            background-color: #fdf6e2;
+            color: black;
+        }
+
+        table, th, td {
+            border: 1px solid grey;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fdf6e2;
+        }
+    </style>
 </head>
+
 <body>
-<p style="text-align: center">This will be assignment #03</p>
+<header style="text-align: center">
+    <h1 style="font-family: Times New Roman, serif">Here is Coby's page</h1>
+    <a href="index.html" title="CS213 Assignments Page" style="font-family: Arial, sans-serif">CS 213 Assignments</a>
+    <a href="#w03Form" title="Week 3 Form">Week 03 Form</a>
+    <hr>
+</header>
+
+<main>
+    <div class="bodyContent" title="w03paragraphs">
+        <h3>Family Time and Slaying Dragons</h3>
+        <p>
+            One of the things that I end up talking about when I am not busy working as a <i>Software
+            QA/QE Engineer</i> or doing homework for one of my <a href="#schoolschedule"
+                                                                  title="School Schedule">classes</a>
+            is usually <b>Dungeons & Dragons</b>. Prior to 2016 I only knew about it from proximity in the nerd/geek
+            culture,
+            at that time my youngest child was turning 3 and I was starting to feel that my children were becoming
+            zombies to electronics and were lacking in imagination
+            and problem solving skills. I was inspired when I read <a
+                href="https://lifehacker.com/the-surprising-benefits-of-role-playing-games-and-how-1684582789"
+                target="_blank" title="The Surprising Benefits of Role-Playing Games (and How to Get Started)">this
+            article</a> from <a href="http://www.lifehacker.com" target="_blank" title="LifeHacker.com">www.lifehacker.com</a>
+            and all the concerns that I was having were answered by the various aspects of this article. From there I
+            started going to my local game store so that I could learn how to play the game and see if it was really all
+            about satanic rituals and witchcraft. Luckily for my children I was unable to detect any evil and I have
+            been running as the dungeon master at least one session of D&D a week for the past several years. If you
+            want to learn more please click the D&D banner below.
+        </p>
+        <a href="https://www.dndbeyond.com/essentials" target="_blank"><img alt="Dungeons & Dragons" title="Dungeons & Dragons New Player Guide" width="700"
+                                                                            height="100"
+                                                                            src="assets/img/DnD_Horiz_1c_Blk_V1_XL_RGB.png"></a>
+        <hr/>
+    </div>
+
+    <div class="formStandard">
+        <form id="w03Form" action="SOON">
+            <table id="formLayout">
+                <tr>
+                    <td>
+                        <label for="fav_book">Favorite Book:</label>
+                    </td>
+                    <td>
+                            <input type="text" id="fav_book">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="reason_fav">What made you fall in love with it?</label>
+
+                    </td>
+                    <td>
+                        <textarea rows="5" cols="75" id="reason_fav"
+                                  placeholder="I promise I won't tell anyone else..."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Have you read or watched any of my favorites? (click all that apply)
+                    </td>
+                    <td style="text-align: right">
+                        The Wheel of Time series by Robert Jordan? <input type="checkbox" name="readFav"
+                                                                          value="WoT"><br/>
+                        The Song of Ice and Fire series by George RR Martin? <input type="checkbox" name="readFav"
+                                                                                    value="GoT"><br/>
+                        The Expanse series by James SA Corey? <input type="checkbox" name="readFav" value="Exp"><br/>
+                        The Stormlight Archives series by Brandon Sanderson? <input type="checkbox" name="readFav"
+                                                                                    value="Storm"><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        What are your thoughts on Star Wars? (There can be only one answer!)
+                    </td>
+                    <td style="text-align: right">
+                        <label for="originalTril">I only like the original trilogy!</label>
+                        <input type="radio" id="originalTril" value="originalTril"><br>
+                        <label for="noPrequels">I don't like the prequels! Jar Jar stinks!</label>
+                        <input type="radio" id="noPrequels" value="noPrequels"><br>
+                        <label for="noNewTril">I don't like the new films they are just rehashes of the same old
+                            story!</label>
+                        <input type="radio" id="noNewTril" value="noNewTril"><br>
+                        <label for="allTheSW">I love all of them! yes even the prequels!</label>
+                        <input type="radio" id="allTheSW" value="allTheSW"><br>
+                        <label for="iDunno">Is that the one with the Klingons?</label>
+                        <input type="radio" id="iDunno" value="iDunno"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Would you be willing to play D&D?
+                    </td>
+                    <td>
+                        <select>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            <option value="Maybe">Maybe</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input style="margin-left: 25%; margin-right: 25%; width: 50%; padding: 10px" type="submit">
+                    </td>
+                    <td>
+                        <input style="margin-left: 25%; margin-right: 25%; width: 50%; padding: 10px" type="reset">
+                    </td>
+                </tr>
+            </table>
+            <br/>
+
+
+        </form>
+    </div>
+
+    <div class="personalInfo">
+        <table id="info">
+            <tr>
+                <td rowspan="3"><img src="assets/img/me.jpg" alt="My beautiful face"></td>
+                <td><b>NAME:</b> Coby Jenkins</td>
+            </tr>
+            <tr>
+                <td><b>DEGREE:</b>Software Engineering Major</td>
+            </tr>
+            <tr>
+                <td><b>FROM:</b> Phoenix Metro area of Arizona.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="schedule">
+        <table id="schoolschedule">
+            <caption style="font-family: Georgia, serif">School Schedule</caption>
+            <tr>
+                <th>Course #</th>
+                <th>Course Description</th>
+                <th>Section #</th>
+                <th>Class Time</th>
+                <th>Class Location</th>
+            </tr>
+            <tr>
+                <td>CS165</td>
+                <td>Object-Oriented Software Develop</td>
+                <td>08</td>
+                <td>00:00-00:00AM</td>
+                <td>Online</td>
+            </tr>
+            <tr>
+                <td>CS213</td>
+                <td>Web Engineering I</td>
+                <td>07</td>
+                <td>00:00-00:00AM</td>
+                <td>Online</td>
+            </tr>
+        </table>
+    </div>
+
+</main>
+
+<footer>
+    <blockquote style="text-align: center; background-color: #fdf6e2; opacity: 0.9">
+        <b>Your</b> level of success will seldom exceed <b>your</b> level of personal development, because success is
+        something you attract by the person you become.
+        <br/>
+        -Jim Rohn
+    </blockquote>
+</footer>
 
 </body>
-</html>
+
+
