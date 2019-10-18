@@ -1,0 +1,16 @@
+div{
+    border: 1px solid green;
+    padding: 10px;
+}
+
+
+.main-flex{
+    display: flex;
+    flex-flow: column;
+
+}
+
+.main-row {
+    flex-flow: row;
+    flex-wrap: wrap;
+}
