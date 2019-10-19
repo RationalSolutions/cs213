@@ -1,16 +1,43 @@
 div{
-    border: 1px solid green;
-    padding: 10px;
+    border: 1px solid blue;
+}
+
+img{
+    display: none;
 }
 
 
-.main-flex{
-    display: flex;
-    flex-flow: column;
 
-}
+/* For Desktop: */
+@media only screen and (min-width: 769px) {
+    div{
+        border: 1px solid red;
+    }
 
-.main-row {
-    flex-flow: row;
-    flex-wrap: wrap;
+    .main-flex{
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+
+    }
+
+    .main-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-row div{
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+
+    .main-row-left{
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: space-between;
+    }
+
+    .main-row-left div{
+
+    }
 }
