@@ -1,43 +1,85 @@
-div{
-    border: 1px solid blue;
+.header{
+    text-align: center;
 }
 
-img{
+.nav-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #CFCFCF;
+    min-width: 320px;
+}
+
+.nav-flex a {
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    color: #333333;
+
+}
+
+.nav-flex a:hover {
+    background-color: #333333;
+    color: #CFCFCF;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+
+}
+
+.sticky + .main-flex{
+    padding-top: 60px;
+}
+
+.main-flex{
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    padding: 0 20px;
+}
+
+.main-row-left div > img{
     display: none;
 }
 
+.main-row div > img{
+    display: none;
+}
 
-
-/* For Desktop: */
-@media only screen and (min-width: 769px) {
-    div{
-        border: 1px solid red;
+ /* For Tablets: */
+@media only screen and (min-width: 426px){
+    .main-row-left div > img{
+        display: block;
     }
 
-    .main-flex{
-        display: flex;
-        flex-flow: column;
-        align-content: center;
-
+    .main-row div > img{
+        display: block;
     }
 
     .main-row {
         display: flex;
-        justify-content: space-between;
-    }
-
-    .main-row div{
-        flex-flow: row;
-        flex-wrap: wrap;
     }
 
     .main-row-left{
         display: flex;
         flex-flow: row-reverse;
+    }
+}
+
+
+/* For Desktop: */
+
+@media only screen and (min-width: 769px) {
+
+    .main-row {
         justify-content: space-between;
+        align-content: center;
     }
 
-    .main-row-left div{
-
+    .main-row-left{
+        justify-content: space-between;
+        align-content: center;
     }
 }

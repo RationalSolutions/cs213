@@ -4,20 +4,22 @@
     <title>Assignment 05</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/styles/05.css">
-
 </head>
 <body>
 
+<header>
+    <div class="header" id="currentPage"><p>Week 05</p></div>
+</header>
+
 <nav>
-    <div class="nav-flex">
-        <ul>
-            <li><a href="#d20"> D20</a></li>
-            <li><a href="#d12">D12</a></li>
-            <li><a href="#d10">D10</a></li>
-            <li><a href="#d8">D8</a></li>
-            <li><a href="#d6">D6</a></li>
-            <li><a href="#d4">D4</a></li>
-        </ul>
+    <div class="nav-flex" id="topNav">
+        <a href="#d20"> D20</a>
+        <a href="#d12">D12</a>
+        <a href="#d10">D10</a>
+        <a href="#d8">D8</a>
+        <a href="#d6">D6</a>
+        <a href="#d4">D4</a>
+        <a href="#currentPage">TOP</a>
     </div>
 </nav>
 
@@ -145,43 +147,26 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>Here is a <em>footer.....</em></p>
+    </footer>
 </main>
 
+<script>
+    window.onscroll = function(){stickyNavBar()};
+
+    var navbar = document.getElementById("topNav");
+    var sticky = navbar.offsetTop;
+
+    function stickyNavBar(){
+        if(window.pageYOffset >= sticky){
+            navbar.classList.add("sticky")
+        } else{
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
 
 </body>
 </html>
-
-
-<!--TODO: This must be new web page with new content. You may not use any of
-          your previous web pages. This web page should look good on any
-          device. It should provide a good user experience when accessed from
-           a phone, tablet, or laptop.-->
-
-<!--TODO: You must include at least 5 images. As the web page scales up and
-          down, text must wrap as necessary, and images must scale
-          accordingly and not be cutoff.-->
-
-<!--TODO: You may choose to set a max-width to some of your images depending
-          upon how large you want them to expand.-->
-
-<!--TODO: In addition to the images, your web page must include a header,
-          text content, a footer, etc.-->
-
-<!--TODO: Resize your web page to test its responsiveness.-->
-
-<!--TODO: When you resize your browser window from laptop size to phone size,
-          you shouldn’t lose any content. There should be no horizontal
-          scrolling required to view content, no matter the browser window
-          size. Only vertical scrolling is allowed.-->
-
-<!--TODO: All text must still be visible and should wrap and not be cut off.
-          Images should shrink properly and not lose content.-->
-
-<!--TODO: There should be enough text that the responsiveness of the text at
-          each screen size is obvious.-->
-
-<!--TODO: Create some responsive design CSS styles to use with your images
-          and other content. Hint: using “max-width: 100% “ and “height: auto”
-          is very useful.-->
-
-<!--TODO: Flexbox must be used-->
