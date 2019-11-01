@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <title>Assignment 07</title>
+    <script src="assets/js/07.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/styles/07.css">
 </head>
 <body>
-<p style="text-align: center">This will be assignment #07</p>
+
+<form id="mortgageCalc">
+    <table>
+        <tr>
+            <td>APR:</td>
+            <td><input type="text" name="apr" id="apr"
+                       onblur="validateNumericInput('apr')"></td>
+            <td><p class="errorMessage"  id="aprError"></p></td>
+        </tr>
+        <tr>
+            <td>Term (in years):</td>
+            <td><input type="text" name="term" id="term"
+                       onblur="validateNumericInput('term')"></td>
+            <td><p class="errorMessage"  id="termError"></p></td>
+        </tr>
+        <tr>
+            <td>Loan Amount:</td>
+            <td><input type="text" name="amount" id="amount"
+                       onblur="validateNumericInput('amount')"></td>
+            <td><p class="errorMessage" id="amountError"></p></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="clear"
+                        onclick="resetForm()">Clear
+                </button>
+            </td>
+            <td>
+                <button type="button" id="calculate"
+                        onclick="calculateMonthlyPayment()">Calculate
+                </button>
+            </td>
+            <td>
+                <p class="errorMessage" id="calculateError"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>Monthly Payment:</td>
+            <td><p id="payment"></p></td>
+        </tr>
+    </table>
+</form>
 
 </body>
 </html>
