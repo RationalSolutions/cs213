@@ -35,31 +35,30 @@
 
     <div class="form_row">
         <label for="products">Products</label>
-        <table id="products"> <!--TODO: Table with check boxes to display 4 or more items to purchase along with their corresponding purchase price (use check boxes to allow selection of the items you wish to purchase). Give the checkboxes the name "item_0", "item_1", etc.-->
+        <table id="products">
             <tr>
                 <td>
                     <div class="row_item">
                         <p>Product 1 description and price</p>
-                        <input type="checkbox" class="item" name="item_0"
-                               value="1">
+                        <input type="checkbox" class="item" id="item_0" name="item_0" value="1">
                     </div>
                 </td>
                 <td>
                     <div class="row_item">
                         <p>Product 2 description and price</p>
-                        <input class="item" type="checkbox" name="item_1" value="2">
+                        <input class="item" type="checkbox" id="item_1" name="item_1" value="2">
                     </div>
                 </td>
                 <td>
                     <div class="row_item">
                         <p>Product 3 description and price</p>
-                        <input class="item" type="checkbox" name="item_2" value="3">
+                        <input class="item" type="checkbox" id="item_2" name="item_2" value="3">
                     </div>
                 </td>
                 <td>
                     <div class="row_item">
                         <p>Product 4 description and price</p>
-                        <input class="item" type="checkbox" name="item_3" value="4">
+                        <input class="item" type="checkbox" id="item_3" name="item_3" value="4">
                     </div>
                 </td>
             </tr>
@@ -100,7 +99,7 @@
 
     <div class="form_row">
         <div class="row_item">
-            <button name="reset" id="reset">Reset</button> <!--TODO: Reset Button - clear all text fields and set focus to First Name - text field. Give this button the name "reset".-->
+            <button name="reset" id="reset">Reset</button>
         </div>
         <div class="row_item">
             <button name="validate" id="validate">Submit</button>

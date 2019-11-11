@@ -11,8 +11,8 @@ window.onload = function(){
   document.getElementById("phone").addEventListener("input", validatePhone);
   document.getElementById("credit_card").addEventListener("input", validateCreditCard);
   document.getElementById("exp_date").addEventListener("input", validateExpDate);
-  document.getElementById("validate").addEventListener("click", validation);
-  document.getElementById("reset").addEventListener("click", reset);
+  document.getElementById("form1").addEventListener("submit", validation);
+  document.getElementById("form1").addEventListener("reset", reset);
   document.getElementById("products").addEventListener("click", calculateTotal);
 }
 
@@ -80,7 +80,8 @@ function validateExpDate() {
   return true;
 }
 
-function validation() {
+function validation(e) {
+  e.preventDefault();
   console.log("entered validation()");
   let address = document.getElementById("address").value;
 
@@ -88,30 +89,43 @@ function validation() {
   {
     document.getElementById("f_name").focus();
     return false;
-  } else if (!validateLastName())
+  }
+
+  if (!validateLastName())
   {
     document.getElementById("last_name").focus();
     return false;
-  } else if (address.length === 0)
+  }
+
+  if (address.length === 0)
   {
     document.getElementById("address").focus();
     return false;
-  } else if (!validatePhone())
+  }
+
+  if (!validatePhone())
   {
     document.getElementById("phone").focus();
     return false;
-  }else if (!validateCreditCard())
+  }
+
+  if (!validateCreditCard())
   {
     document.getElementById("credit_card").focus();
     return false;
-  } else if (!validateExpDate())
+  }
+
+  if (!validateExpDate())
   {
     document.getElementById("exp_date").focus();
     return false;
-  } else return true;
+  }
+
+  return true;
 }
 
-function reset() {
+function reset(e) {
+  e.preventDefault();
   let errors = document.getElementsByClassName("error_msg");
 
   for (let i = 0; i < errors.length; i++) {
@@ -122,9 +136,18 @@ function reset() {
 }
 
 function calculateTotal(){
-  let prod_ct = document.getElementsByClassName("item").length;
+  let prod_cnt = document.getElementsByClassName("item").length;
+  let total = 0;
 
-  for (let i = 0; i < prod_ct; i++) {
-    console.log(document.getElementById("item_"+i).checked);
+  for (let i = 0; i < prod_cnt; i++) {
+    if (document.getElementById("item_"+i).checked)
+    {
+      let itemVal = document.getElementById("item_"+i).value;
+      let price = parseInt(itemVal, 10);
+      console.log(itemVal);
+      total += price;
+    }
   }
+
+  document.getElementById("total").value = "$"+ total;
 }
