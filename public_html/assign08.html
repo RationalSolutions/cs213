@@ -2,9 +2,116 @@
 <html lang="en">
 <head>
     <title>Assignment 08</title>
+    <script src="assets/js/08.js"></script>
 </head>
 <body>
-<p style="text-align: center">This will be assignment #08</p>
+
+<form action="#" id="form1">
+    <div class="form_row">
+        <div class="row_item">
+            <label for="f_name">First Name:</label>
+            <input type="text" name="first_name" id="f_name" placeholder="Hyrum">
+            <span class="error_msg" id="fn_err" style="visibility: hidden">Please enter a valid value</span>
+        </div>
+        <div class="row_item">
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Hammerfist" >
+            <span class="error_msg" id="ln_err" style="visibility: hidden">Please enter a valid value</span>
+        </div>
+    </div>
+
+    <div class="form_row">
+        <div class="row_item">
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" placeholder="(street address, city, state, and zip)"></textarea>
+            <span class="error_msg" id="address_err" style="visibility: hidden">Please enter a valid value</span>
+        </div>
+        <div class="row_item">
+            <label for="phone">Phone Number:</label>
+            <input type="text" name="phone" id="phone" placeholder="###-###-####">
+            <span class="error_msg" id="phone_err" style="visibility: hidden">Please enter a valid value</span>
+        </div>
+    </div>
+
+    <div class="form_row">
+        <label for="products">Products</label>
+        <table id="products"> <!--TODO: Table with check boxes to display 4 or more items to purchase along with their corresponding purchase price (use check boxes to allow selection of the items you wish to purchase). Give the checkboxes the name "item_0", "item_1", etc.-->
+            <tr>
+                <td>
+                    <div class="row_item">
+                        <p>Product 1 description and price</p>
+                        <input type="checkbox" class="item" name="item_0"
+                               value="1">
+                    </div>
+                </td>
+                <td>
+                    <div class="row_item">
+                        <p>Product 2 description and price</p>
+                        <input class="item" type="checkbox" name="item_1" value="2">
+                    </div>
+                </td>
+                <td>
+                    <div class="row_item">
+                        <p>Product 3 description and price</p>
+                        <input class="item" type="checkbox" name="item_2" value="3">
+                    </div>
+                </td>
+                <td>
+                    <div class="row_item">
+                        <p>Product 4 description and price</p>
+                        <input class="item" type="checkbox" name="item_3" value="4">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form_row">
+        <div class="row_item">
+            <label for="total">Total:</label>
+            <input type="text" name="total" id="total" value="$0.00" readonly>
+        </div>
+    </div>
+
+    <div class="form_row">
+        <div class="row_item">
+            <label for="visa">Visa</label>
+            <input type="radio" name="card" id="visa" value="visa">
+            <label for="masterCard">MasterCard</label>
+            <input type="radio" name="card" id="masterCard" value="masterCard">
+            <label for="americanExpress">American Express</label>
+            <input type="radio" name="card" id="americanExpress" value="americanExpress">
+            <label for="discover">Discover</label>
+            <input type="radio" name="card" id="discover" value="discover">
+        </div>
+    </div>
+    <div class="form_row">
+        <div class="row_item">
+            <label for="credit_card">Credit Card #</label>
+            <input type="text" name="credit_card" id="credit_card" placeholder="#### #### #### #### ####">
+            <span class="error_msg" id="cc_err" style="visibility: hidden">Please enter a valid value</span>
+        </div>
+        <div class="row_item">
+            <label for="exp_date">Exp</label>
+            <input type="text" name="exp_date" id="exp_date" placeholder="##/####">
+            <span class="error_msg" id="expDate_err" style="visibility: hidden">Please enter a valid value</span>
+        </div>
+    </div>
+
+    <div class="form_row">
+        <div class="row_item">
+            <button name="reset" id="reset">Reset</button> <!--TODO: Reset Button - clear all text fields and set focus to First Name - text field. Give this button the name "reset".-->
+        </div>
+        <div class="row_item">
+            <button name="validate" id="validate">Submit</button>
+        </div>
+    </div>
+
+
+
+</form>
 
 </body>
 </html>
+
+
