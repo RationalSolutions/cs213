@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="assets/js/09.js"></script>
     <title>Assignment 09</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/09.css">
 </head>
 <body>
 
 <div id="section_1">
+    <h1>Section 1</h1>
     <div id="s1_elements">
         <button id="canada">Canada</button>
         <button id="mexico">Mexico</button>
@@ -13,19 +16,19 @@
         <button id="usa">United States of America</button>
     </div>
     <div id="s1_data">
-        <table id="s1_results"></table>
+        <pre id="s1_results"></pre>
     </div>
 </div>
 
 <hr>
 
 <div id="section_2">
-    <input type="text" id="dataUrl">
+    <h1>Section 2</h1>
+    <label for="dataUrl">Filename:</label>
+    <input type="text" id="dataUrl" value="json.txt">
     <button id="dataFetch">Submit</button>
 </div>
-
-
+<div id="s2_results">
+</div>
 </body>
 </html>
-
-<!--TODO: Create and validate AJAX calls-->
