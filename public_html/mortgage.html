@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Assignment 07</title>
+    <title>Mortgage Calculator - PHP</title>
     <script src="assets/js/07.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/styles/07.css">
 </head>
@@ -9,25 +9,26 @@
 
 <header class="header">
     <h1>Mortgage Payment Calculator</h1>
-    <img src="assets/img/w07/header_buying_house.jpg" height="243">
+    <img src="assets/img/w07/header_buying_house.jpg" height="243"
+         alt="buying a house">
 </header>
 <div id="mainContent">
     <form id="mortgageCalc" action="mortgage.php">
         <table>
             <tr>
-                <td>APR:</td>
+                <td><label for="apr">APR:</label></td>
                 <td><input type="text" name="apr" id="apr"
                            onblur="validateAPRInput()"></td>
                 <td><p class="errorMessage" id="aprError"></p></td>
             </tr>
             <tr>
-                <td>Loan Term (in years):</td>
+                <td><label for="term">Loan Term (in years):</label></td>
                 <td><input type="text" name="term" id="term"
                            onblur="validateTermInput()"></td>
                 <td><p class="errorMessage" id="termError"></p></td>
             </tr>
             <tr>
-                <td>Loan Amount - (in dollars):</td>
+                <td><label for="amount">Loan Amount - (in dollars):</label></td>
                 <td><input type="text" name="amount" id="amount"
                            onblur="validateAmountInput()"></td>
                 <td><p class="errorMessage" id="amountError"></p></td>
@@ -39,8 +40,7 @@
                     </button>
                 </td>
                 <td>
-                    <button type="button" id="calculate"
-                            onclick="calculateMonthlyPayment()">Calculate
+                    <button type="submit" id="calculate">Calculate
                     </button>
                 </td>
             </tr>
