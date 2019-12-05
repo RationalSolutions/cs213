@@ -13,3 +13,4 @@ $item3 = $_GET['item_3'];
 
 
 
+http://localhost:7683/~jenkinsplus1/assets/php/assign11.php?first_name=Coby&last_name=Jenkins&address=61+W.+Hereford+Dr&phone=602-875-7611&item_0=1&item_1=2&item_2=3&item_3=4&total=%2410&credit_card=1234123412341234&exp_date=12%2F2023&validate=

@@ -80,44 +80,50 @@ function validateExpDate() {
   return true;
 }
 
-function validation() {
-  //e.preventDefault(); Add e back into the function
+function validation(e) {
+
   console.log("entered validation()");
   let address = document.getElementById("address").value;
 
   if (!validateFirstName())
   {
     document.getElementById("f_name").focus();
+    e.preventDefault();
     return false;
   }
 
   if (!validateLastName())
   {
     document.getElementById("last_name").focus();
+    e.preventDefault();
     return false;
   }
 
   if (address.length === 0)
   {
     document.getElementById("address").focus();
+    e.preventDefault();
     return false;
   }
 
   if (!validatePhone())
   {
     document.getElementById("phone").focus();
+    e.preventDefault();
     return false;
   }
 
   if (!validateCreditCard())
   {
     document.getElementById("credit_card").focus();
+    e.preventDefault();
     return false;
   }
 
   if (!validateExpDate())
   {
     document.getElementById("exp_date").focus();
+    e.preventDefault();
     return false;
   }
 
